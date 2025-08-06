@@ -28,6 +28,7 @@ const ProjectCard = ({ project }) => (
         startIcon={<GitHub />}
         href={project.github}
         target="_blank"
+        rel="noopener noreferrer"
       >
         View Project
       </Button>

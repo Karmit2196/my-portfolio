@@ -32,6 +32,67 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Responsive typography and spacing - Mobile-first approach */
+html {
+  font-size: 14px; /* Base size for mobile */
+}
+
+@media (min-width: 600px) {
+  html {
+    font-size: 15px; /* Small devices (tablets) */
+  }
+}
+
+@media (min-width: 900px) {
+  html {
+    font-size: 16px; /* Medium devices (small laptops) */
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 17px; /* Large devices (desktops) */
+  }
+}
+
+@media (min-width: 1536px) {
+  html {
+    font-size: 18px; /* Extra large devices (large desktops) */
+  }
+}
+
+/* Touch-friendly interactions for mobile */
+@media (hover: none) and (pointer: coarse) {
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Prevent horizontal scroll on mobile */
+body {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Better focus states for accessibility */
+button:focus, a:focus, [role="button"]:focus {
+  outline: 2px solid #64ffda;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  body {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  .MuiAppBar-root {
+    background-color: #000000 !important;
+  }
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -48,4 +109,142 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #4cd6b3;
+}
+
+/* Responsive spacing utilities */
+:root {
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+}
+
+@media (min-width: 600px) {
+  :root {
+    --spacing-xs: 0.75rem;
+    --spacing-sm: 1.25rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 2.5rem;
+    --spacing-xl: 3.5rem;
+    --spacing-2xl: 4.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  :root {
+    --spacing-xs: 1rem;
+    --spacing-sm: 1.5rem;
+    --spacing-md: 2.5rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 4rem;
+    --spacing-2xl: 5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --spacing-xs: 1.25rem;
+    --spacing-sm: 1.75rem;
+    --spacing-md: 3rem;
+    --spacing-lg: 3.5rem;
+    --spacing-xl: 4.5rem;
+    --spacing-2xl: 6rem;
+  }
+}
+
+/* Responsive container max-widths */
+.container-responsive {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-sm);
+  padding-right: var(--spacing-sm);
+}
+
+@media (min-width: 600px) {
+  .container-responsive {
+    max-width: 540px;
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+  }
+}
+
+@media (min-width: 900px) {
+  .container-responsive {
+    max-width: 720px;
+    padding-left: var(--spacing-lg);
+    padding-right: var(--spacing-lg);
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-responsive {
+    max-width: 960px;
+    padding-left: var(--spacing-xl);
+    padding-right: var(--spacing-xl);
+  }
+}
+
+@media (min-width: 1536px) {
+  .container-responsive {
+    max-width: 1200px;
+    padding-left: var(--spacing-2xl);
+    padding-right: var(--spacing-2xl);
+  }
+}
+
+/* Responsive text sizing */
+.text-xs { font-size: 0.75rem; }
+.text-sm { font-size: 0.875rem; }
+.text-base { font-size: 1rem; }
+.text-lg { font-size: 1.125rem; }
+.text-xl { font-size: 1.25rem; }
+.text-2xl { font-size: 1.5rem; }
+.text-3xl { font-size: 1.875rem; }
+.text-4xl { font-size: 2.25rem; }
+
+@media (min-width: 600px) {
+  .text-xs { font-size: 0.8rem; }
+  .text-sm { font-size: 0.9rem; }
+  .text-base { font-size: 1.05rem; }
+  .text-lg { font-size: 1.175rem; }
+  .text-xl { font-size: 1.325rem; }
+  .text-2xl { font-size: 1.6rem; }
+  .text-3xl { font-size: 2rem; }
+  .text-4xl { font-size: 2.4rem; }
+}
+
+@media (min-width: 900px) {
+  .text-xs { font-size: 0.85rem; }
+  .text-sm { font-size: 0.95rem; }
+  .text-base { font-size: 1.1rem; }
+  .text-lg { font-size: 1.225rem; }
+  .text-xl { font-size: 1.4rem; }
+  .text-2xl { font-size: 1.7rem; }
+  .text-3xl { font-size: 2.125rem; }
+  .text-4xl { font-size: 2.55rem; }
+}
+
+@media (min-width: 1200px) {
+  .text-xs { font-size: 0.9rem; }
+  .text-sm { font-size: 1rem; }
+  .text-base { font-size: 1.15rem; }
+  .text-lg { font-size: 1.275rem; }
+  .text-xl { font-size: 1.475rem; }
+  .text-2xl { font-size: 1.8rem; }
+  .text-3xl { font-size: 2.25rem; }
+  .text-4xl { font-size: 2.7rem; }
+}
+
+@media (min-width: 1536px) {
+  .text-xs { font-size: 0.95rem; }
+  .text-sm { font-size: 1.05rem; }
+  .text-base { font-size: 1.2rem; }
+  .text-lg { font-size: 1.325rem; }
+  .text-xl { font-size: 1.55rem; }
+  .text-2xl { font-size: 1.9rem; }
+  .text-3xl { font-size: 2.375rem; }
+  .text-4xl { font-size: 2.85rem; }
 }

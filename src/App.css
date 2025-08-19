@@ -13,6 +13,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #0a192f;
   color: #ccd6f6;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Smooth scrolling */
@@ -77,6 +79,86 @@ html {
   transition: all 0.3s ease-in-out;
 }
 
+/* Header-specific responsive fixes */
+.header-title-responsive {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Ensure title is visible on all screen sizes */
+@media (max-width: 480px) {
+  .header-title-responsive {
+    max-width: 160px !important;
+    font-size: 0.85rem !important;
+  }
+  
+  .header-social-icons {
+    gap: 1rem !important;
+  }
+  
+  .header-social-icons .MuiIconButton-root {
+    min-width: 44px !important;
+    min-height: 44px !important;
+    padding: 1rem !important;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 600px) {
+  .header-title-responsive {
+    max-width: 180px !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .header-title-responsive {
+    max-width: 220px !important;
+    font-size: 1rem !important;
+  }
+}
+
+/* Responsive utilities */
+.mobile-hidden {
+  display: none;
+}
+
+.mobile-full {
+  width: 100% !important;
+}
+
+/* Mobile-first responsive utilities */
+@media (min-width: 600px) {
+  .mobile-hidden {
+    display: block;
+  }
+  
+  .mobile-full {
+    width: auto !important;
+  }
+}
+
+/* Tablet and up */
+@media (min-width: 900px) {
+  .tablet-hidden {
+    display: block;
+  }
+}
+
+/* Desktop and up */
+@media (min-width: 1200px) {
+  .desktop-hidden {
+    display: block;
+  }
+}
+
+/* Large desktop and up */
+@media (min-width: 1536px) {
+  .xl-hidden {
+    display: block;
+  }
+}
+
 /* Mobile optimizations */
 @media (max-width: 768px) {
   .mobile-hidden {
@@ -85,6 +167,34 @@ html {
   
   .mobile-full {
     width: 100% !important;
+  }
+  
+  /* Improve touch targets on mobile */
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Better text readability on small screens */
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  /* Optimize spacing for mobile */
+  .mobile-spacing {
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+  
+  /* Header spacing optimization for mobile */
+  .header-toolbar {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  .header-title {
+    margin-right: 0.5rem !important;
   }
 }
 
@@ -106,4 +216,142 @@ html {
 
 .pulse {
   animation: pulse 2s infinite;
+}
+
+/* Responsive image handling */
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive container utilities */
+.container-fluid {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 600px) {
+  .container-fluid {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .container-fluid {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-fluid {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container-fluid {
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+}
+
+/* Responsive text utilities */
+.text-responsive-xs {
+  font-size: 0.75rem;
+}
+
+.text-responsive-sm {
+  font-size: 0.875rem;
+}
+
+.text-responsive-md {
+  font-size: 1rem;
+}
+
+.text-responsive-lg {
+  font-size: 1.125rem;
+}
+
+.text-responsive-xl {
+  font-size: 1.25rem;
+}
+
+@media (min-width: 600px) {
+  .text-responsive-xs {
+    font-size: 0.8rem;
+  }
+  
+  .text-responsive-sm {
+    font-size: 0.9rem;
+  }
+  
+  .text-responsive-md {
+    font-size: 1.05rem;
+  }
+  
+  .text-responsive-lg {
+    font-size: 1.175rem;
+  }
+  
+  .text-responsive-xl {
+    font-size: 1.325rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .text-responsive-xs {
+    font-size: 0.85rem;
+  }
+  
+  .text-responsive-sm {
+    font-size: 0.95rem;
+  }
+  
+  .text-responsive-md {
+    font-size: 1.1rem;
+  }
+  
+  .text-responsive-lg {
+    font-size: 1.225rem;
+  }
+  
+  .text-responsive-xl {
+    font-size: 1.4rem;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  body {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  .MuiAppBar-root {
+    background-color: #000000 !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .fade-in-up {
+    animation: none;
+  }
+  
+  .custom-button:hover {
+    transform: none;
+  }
 }

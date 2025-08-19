@@ -1,0 +1,36 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer ring with gradient effect -->
+  <defs>
+    <linearGradient id="outerRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#64ffda;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0a192f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#64ffda;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="innerRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#112240;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#233554;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="letterK" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#64ffda;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ccd6f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle with subtle shadow -->
+  <circle cx="16" cy="16" r="15.5" fill="#0a192f" opacity="0.3"/>
+  
+  <!-- Outer ring - elegant border -->
+  <circle cx="16" cy="16" r="15" fill="none" stroke="url(#outerRing)" stroke-width="1.5" stroke-linecap="round"/>
+  
+  <!-- Inner ring for depth -->
+  <circle cx="16" cy="16" r="12.5" fill="url(#innerRing)" stroke="#64ffda" stroke-width="0.25" opacity="0.8"/>
+  
+  <!-- Letter K with elegant styling -->
+  <path d="M 10 8.75 L 10 23.25 L 12.5 23.25 L 12.5 17.5 L 17.5 23.25 L 20 23.25 L 15 16.25 L 20 8.75 L 17.5 8.75 L 12.5 15 L 12.5 8.75 Z" fill="url(#letterK)" stroke="#64ffda" stroke-width="0.1" opacity="0.9"/>
+  
+  <!-- Elegant accent elements -->
+  <circle cx="7.5" cy="7.5" r="0.5" fill="#64ffda" opacity="0.7"/>
+  <circle cx="24.5" cy="7.5" r="0.5" fill="#64ffda" opacity="0.7"/>
+  <circle cx="7.5" cy="24.5" r="0.5" fill="#64ffda" opacity="0.7"/>
+  <circle cx="24.5" cy="24.5" r="0.5" fill="#64ffda" opacity="0.7"/>
+</svg> 

@@ -1,0 +1,43 @@
+<svg width="192" height="192" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer ring with gradient effect -->
+  <defs>
+    <linearGradient id="outerRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#64ffda;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0a192f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#64ffda;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="innerRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#112240;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#233554;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="letterK" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#64ffda;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ccd6f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle with subtle shadow -->
+  <circle cx="96" cy="96" r="93" fill="#0a192f" opacity="0.3"/>
+  
+  <!-- Outer ring - elegant border -->
+  <circle cx="96" cy="96" r="90" fill="none" stroke="url(#outerRing)" stroke-width="4.5" stroke-linecap="round"/>
+  
+  <!-- Inner ring for depth -->
+  <circle cx="96" cy="96" r="75" fill="url(#innerRing)" stroke="#64ffda" stroke-width="1.5" opacity="0.8"/>
+  
+  <!-- Letter K with elegant styling -->
+  <path d="M 60 52.5 L 60 139.5 L 75 139.5 L 75 105 L 105 139.5 L 120 139.5 L 90 97.5 L 120 52.5 L 105 52.5 L 75 90 L 75 52.5 Z" fill="url(#letterK)" stroke="#64ffda" stroke-width="0.75" opacity="0.9"/>
+  
+  <!-- Elegant accent elements -->
+  <circle cx="45" cy="45" r="6" fill="#64ffda" opacity="0.7"/>
+  <circle cx="147" cy="45" r="6" fill="#64ffda" opacity="0.7"/>
+  <circle cx="45" cy="147" r="6" fill="#64ffda" opacity="0.7"/>
+  <circle cx="147" cy="147" r="6" fill="#64ffda" opacity="0.7"/>
+  
+  <!-- Subtle connecting lines representing automation -->
+  <line x1="51" y1="45" x2="141" y2="45" stroke="#64ffda" stroke-width="1.125" opacity="0.4" stroke-linecap="round"/>
+  <line x1="51" y1="147" x2="141" y2="147" stroke="#64ffda" stroke-width="1.125" opacity="0.4" stroke-linecap="round"/>
+  
+  <!-- Inner glow effect -->
+  <circle cx="96" cy="96" r="67.5" fill="none" stroke="#64ffda" stroke-width="0.375" opacity="0.2"/>
+</svg> 

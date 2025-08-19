@@ -40,4 +40,4 @@
   
   <!-- Inner glow effect -->
   <circle cx="256" cy="256" r="180" fill="none" stroke="#64ffda" stroke-width="0.5" opacity="0.2"/>
-</svg>
+</svg> 

@@ -8,10 +8,11 @@ export const NAVIGATION = {
 };
 
 export const HEADER = {
-  title: 'Karmit Lalani | Senior SDET',
+  title: 'Karmit Lalani | SDET',
   socialLinks: {
     github: 'https://github.com/Karmit2196',
-    linkedin: 'https://www.linkedin.com/in/karmit-lalani-511735147/'
+    linkedin: 'https://www.linkedin.com/in/karmit-lalani-511735147/',
+    email: 'karmit12lalani@gmail.com'
   }
 };
 
@@ -97,6 +98,15 @@ export const SKILLS = {
 };
 
 export const THEME = {
+  breakpoints: {
+    values: {
+      xs: 0,      // Extra small devices (phones, 0px and up)
+      sm: 600,    // Small devices (tablets, 600px and up)
+      md: 900,    // Medium devices (small laptops, 900px and up)
+      lg: 1200,   // Large devices (desktops, 1200px and up)
+      xl: 1536,   // Extra large devices (large desktops, 1536px and up)
+    },
+  },
   palette: {
     mode: 'dark',
     primary: {
@@ -117,33 +127,82 @@ export const THEME = {
   typography: {
     fontFamily: '"Inter", "Roboto", "Helvetica", "Arial", sans-serif',
     h1: {
-      fontSize: '3.5rem',
+      fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem', xl: '4rem' },
       fontWeight: 700,
       color: '#ccd6f6',
+      lineHeight: { xs: 1.1, sm: 1.15, md: 1.2, lg: 1.2, xl: 1.2 },
+      letterSpacing: { xs: '-0.02em', sm: '-0.025em', md: '-0.03em' },
     },
     h2: {
-      fontSize: '2.5rem',
+      fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem', lg: '2.25rem', xl: '2.5rem' },
       fontWeight: 600,
       color: '#ccd6f6',
+      lineHeight: { xs: 1.2, sm: 1.25, md: 1.3, lg: 1.3, xl: 1.3 },
+      letterSpacing: { xs: '-0.01em', sm: '-0.015em', md: '-0.02em' },
     },
     h3: {
-      fontSize: '1.5rem',
+      fontSize: { xs: '1.125rem', sm: '1.25rem', md: '1.375rem', lg: '1.5rem', xl: '1.625rem' },
       fontWeight: 600,
       color: '#64ffda',
+      lineHeight: { xs: 1.3, sm: 1.35, md: 1.4, lg: 1.4, xl: 1.4 },
+    },
+    h4: {
+      fontSize: { xs: '1rem', sm: '1.125rem', md: '1.25rem', lg: '1.375rem', xl: '1.5rem' },
+      fontWeight: 500,
+      color: '#ccd6f6',
+      lineHeight: { xs: 1.4, sm: 1.45, md: 1.5, lg: 1.5, xl: 1.5 },
+    },
+    h5: {
+      fontSize: { xs: '0.875rem', sm: '1rem', md: '1.125rem', lg: '1.25rem', xl: '1.375rem' },
+      fontWeight: 500,
+      color: '#8892b0',
+      lineHeight: { xs: 1.4, sm: 1.45, md: 1.5, lg: 1.5, xl: 1.5 },
+    },
+    h6: {
+      fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem', lg: '1.125rem', xl: '1.25rem' },
+      fontWeight: 500,
+      color: '#8892b0',
+      lineHeight: { xs: 1.4, sm: 1.45, md: 1.5, lg: 1.5, xl: 1.5 },
     },
     body1: {
-      fontSize: '1.1rem',
-      lineHeight: 1.6,
+      fontSize: { xs: '0.875rem', sm: '0.95rem', md: '1rem', lg: '1.05rem', xl: '1.1rem' },
+      lineHeight: { xs: 1.5, sm: 1.55, md: 1.6, lg: 1.65, xl: 1.7 },
+      color: '#8892b0',
+      letterSpacing: { xs: '0.01em', sm: '0.015em', md: '0.02em' },
+    },
+    body2: {
+      fontSize: { xs: '0.8rem', sm: '0.875rem', md: '0.9rem', lg: '0.95rem', xl: '1rem' },
+      lineHeight: { xs: 1.4, sm: 1.45, md: 1.5, lg: 1.55, xl: 1.6 },
+      color: '#8892b0',
+      letterSpacing: { xs: '0.01em', sm: '0.015em', md: '0.02em' },
+    },
+    caption: {
+      fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.85rem', lg: '0.9rem', xl: '0.95rem' },
+      lineHeight: { xs: 1.3, sm: 1.35, md: 1.4, lg: 1.45, xl: 1.5 },
       color: '#8892b0',
     },
+    button: {
+      fontSize: { xs: '0.8rem', sm: '0.875rem', md: '0.9rem', lg: '0.95rem', xl: '1rem' },
+      fontWeight: 500,
+      textTransform: 'none',
+      letterSpacing: { xs: '0.02em', sm: '0.025em', md: '0.03em' },
+    },
   },
+  spacing: (factor) => `${8 * factor}px`,
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
           textTransform: 'none',
           borderRadius: 4,
-          padding: '12px 24px',
+          padding: { xs: '8px 16px', sm: '10px 20px', md: '12px 24px', lg: '14px 28px' },
+          minHeight: { xs: '36px', sm: '40px', md: '44px', lg: '48px' },
+          fontSize: { xs: '0.8rem', sm: '0.875rem', md: '0.9rem', lg: '0.95rem', xl: '1rem' },
+          transition: 'all 0.3s ease',
+          '&:hover': {
+            transform: 'translateY(-2px)',
+            boxShadow: '0 8px 20px rgba(100, 255, 218, 0.2)',
+          },
         },
       },
     },
@@ -153,10 +212,48 @@ export const THEME = {
           backgroundColor: '#112240',
           border: '1px solid #233554',
           transition: 'all 0.3s ease',
+          borderRadius: { xs: 8, sm: 10, md: 12, lg: 16 },
           '&:hover': {
             transform: 'translateY(-5px)',
             borderColor: '#64ffda',
+            boxShadow: '0 12px 30px rgba(100, 255, 218, 0.15)',
           },
+        },
+      },
+    },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          fontSize: { xs: '0.7rem', sm: '0.75rem', md: '0.8rem', lg: '0.85rem', xl: '0.9rem' },
+          height: { xs: '20px', sm: '22px', md: '24px', lg: '26px', xl: '28px' },
+          borderRadius: { xs: 10, sm: 11, md: 12, lg: 13, xl: 14 },
+          transition: 'all 0.3s ease',
+          '&:hover': {
+            transform: 'translateY(-1px)',
+            boxShadow: '0 4px 12px rgba(100, 255, 218, 0.2)',
+          },
+        },
+      },
+    },
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          padding: { xs: 1, sm: 1.25, md: 1.5, lg: 1.75, xl: 2 },
+          minWidth: { xs: '40px', sm: '44px', md: '48px', lg: '52px', xl: '56px' },
+          minHeight: { xs: '40px', sm: '44px', md: '48px', lg: '52px', xl: '56px' },
+          transition: 'all 0.3s ease',
+          '&:hover': {
+            transform: 'scale(1.1)',
+            backgroundColor: 'rgba(100, 255, 218, 0.1)',
+          },
+        },
+      },
+    },
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          wordBreak: 'break-word',
+          overflowWrap: 'break-word',
         },
       },
     },

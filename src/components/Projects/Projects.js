@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Grid, Card, CardContent, Typography, Chip, Button, useTheme } from '@mui/material';
-import { GitHub } from '@mui/icons-material';
+import { GitHub, Language } from '@mui/icons-material';
 import { PROJECTS } from '../../constants';
 
 const ProjectCard = ({ project }) => {
@@ -76,32 +76,60 @@ const ProjectCard = ({ project }) => {
             />
           ))}
         </Box>
-        
-        <Button 
-          variant="outlined" 
-          size="small" 
-          startIcon={<GitHub />}
-          href={project.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          sx={{
-            alignSelf: 'flex-start',
-            fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.85rem', lg: '0.9rem', xl: '0.95rem' },
-            px: { xs: 1.5, sm: 2, md: 2.5, lg: 3 },
-            py: { xs: 0.75, sm: 1, md: 1.25, lg: 1.5 },
-            minHeight: { xs: '32px', sm: '36px', md: '40px', lg: '44px' },
-            minWidth: { xs: '44px', sm: '48px', md: '52px', lg: '56px' },
-            borderColor: '#64ffda',
-            color: '#64ffda',
-            '&:hover': {
-              backgroundColor: 'rgba(100, 255, 218, 0.1)',
-              borderColor: '#64ffda',
-              transform: 'translateY(-1px)'
-            }
-          }}
-        >
-          View Project
-        </Button>
+        <Box sx={{ display: 'flex', gap: { xs: 1, sm: 1.5, md: 2 }, flexWrap: 'wrap' }}>
+          {project.github && (
+            <Button 
+              variant="outlined" 
+              size="small" 
+              startIcon={<GitHub />} 
+              href={project.github} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              sx={{
+                fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.85rem', lg: '0.9rem', xl: '0.95rem' },
+                px: { xs: 1.5, sm: 2, md: 2.5, lg: 3 },
+                py: { xs: 0.75, sm: 1, md: 1.25, lg: 1.5 },
+                minHeight: { xs: '32px', sm: '36px', md: '40px', lg: '44px' },
+                minWidth: { xs: '44px', sm: '48px', md: '52px', lg: '56px' },
+                borderColor: '#64ffda',
+                color: '#64ffda',
+                '&:hover': {
+                  backgroundColor: 'rgba(100, 255, 218, 0.1)',
+                  borderColor: '#64ffda',
+                  transform: 'translateY(-1px)'
+                }
+              }}
+            >
+              GitHub
+            </Button>
+          )}
+          {project.npm && (
+            <Button 
+              variant="outlined" 
+              size="small" 
+              startIcon={<Language />} 
+              href={project.npm} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              sx={{
+                fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.85rem', lg: '0.9rem', xl: '0.95rem' },
+                px: { xs: 1.5, sm: 2, md: 2.5, lg: 3 },
+                py: { xs: 0.75, sm: 1, md: 1.25, lg: 1.5 },
+                minHeight: { xs: '32px', sm: '36px', md: '40px', lg: '44px' },
+                minWidth: { xs: '44px', sm: '48px', md: '52px', lg: '56px' },
+                borderColor: '#64ffda',
+                color: '#64ffda',
+                '&:hover': {
+                  backgroundColor: 'rgba(100, 255, 218, 0.1)',
+                  borderColor: '#64ffda',
+                  transform: 'translateY(-1px)'
+                }
+              }}
+            >
+              NPM
+            </Button>
+          )}
+        </Box>
       </CardContent>
     </Card>
   );
@@ -124,4 +152,4 @@ const Projects = () => {
   );
 };
 
-export default Projects; 
+export default Projects;

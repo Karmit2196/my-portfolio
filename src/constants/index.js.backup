@@ -65,13 +65,6 @@ export const EXPERIENCE = [
 
 export const PROJECTS = [
   {
-    title: 'Cypress Utility Framework',
-    description: 'A comprehensive utility framework for Cypress testing with 25+ advanced UI utility methods. Features smart waiting utilities, element state validation, clipboard operations, keyboard shortcuts, and professional testing capabilities for enhanced automation workflows. Published as NPM package with 3+ weekly downloads.',
-    tech: ['Cypress', 'TypeScript', 'UI Utilities', 'Test Automation', 'Smart Waiting', 'Element Validation'],
-    github: 'https://github.com/Karmit2196/cypress-utility-framework',
-    npm: 'https://www.npmjs.com/package/cypress-utils-framework'
-  },
-  {
     title: 'Cypress + Cucumber Automation Framework',
     description: 'A modern Cypress framework featuring Cucumber (Gherkin) for Behavior-Driven Development (BDD). Includes Page Object Model, data-driven testing, cross-browser testing, and comprehensive CI/CD integration with GitHub Actions.',
     tech: ['Cypress', 'Cucumber', 'TypeScript', 'GitHub Actions', 'Mochawesome', 'BDD'],
@@ -88,13 +81,6 @@ export const PROJECTS = [
     description: 'A modern Cypress framework with best practices, maintainability, and robust CI/CD integration. Features Page Object Model, custom commands, data-driven testing, and comprehensive reporting.',
     tech: ['Cypress', 'JavaScript', 'GitHub Actions', 'Mochawesome', 'POM', 'CI/CD'],
     github: 'https://github.com/Karmit2196/cypress-framework'
-  },
-  
-  {
-    title: 'Playwright API Framework',
-    description: 'A robust API testing framework built with Playwright for comprehensive API validation and testing. Features request/response handling, data-driven testing, and integration with modern CI/CD pipelines for reliable API testing workflows.',
-    tech: ['Playwright', 'API Testing', 'TypeScript', 'CI/CD', 'Data-driven Testing', 'Request Validation'],
-    github: 'https://github.com/Karmit2196/playwright-api'
   }
 ];
 
@@ -272,4 +258,4 @@ export const THEME = {
       },
     },
   },
-};
+}; 

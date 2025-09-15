@@ -48,17 +48,15 @@ const Header = ({ activeSection, onSectionChange }) => {
                 color: '#64ffda'
               },
               py: { xs: 2, sm: 2.5 },
-              px: { xs: 3, sm: 4 },
-              minHeight: { xs: '48px', sm: '56px' },
-              transition: 'all 0.3s ease'
+              px: { xs: 3, sm: 4 }
             }}
           >
             <ListItemText 
               primary={section.label}
               sx={{
                 '& .MuiListItemText-primary': {
-                  fontSize: { xs: '1rem', sm: '1.1rem', md: '1.2rem' },
-                  fontWeight: activeSection === section.id ? 600 : 400,
+                  fontSize: { xs: '1rem', sm: '1.125rem', md: '1.25rem' },
+                  fontWeight: 500,
                   letterSpacing: '0.02em'
                 }
               }}
@@ -74,209 +72,159 @@ const Header = ({ activeSection, onSectionChange }) => {
       <AppBar 
         position="static" 
         sx={{ 
-          backgroundColor: 'transparent', 
+          backgroundColor: 'rgba(10, 25, 47, 0.95)',
           boxShadow: 'none',
           borderBottom: '1px solid rgba(100, 255, 218, 0.1)',
-          backdropFilter: 'blur(10px)',
-          backgroundColor: 'rgba(10, 25, 47, 0.95)'
+          backdropFilter: 'blur(10px)'
         }}
       >
         <Toolbar 
           className="header-toolbar"
           sx={{ 
-            justifyContent: 'space-between', 
+            justifyContent: 'space-between',
             px: { xs: 2, sm: 3, md: 4, lg: 6 },
             py: { xs: 1, sm: 1.5, md: 2 },
-            minHeight: { xs: '64px', sm: '72px', md: '80px', lg: '88px' }
+            minHeight: { xs: '60px', sm: '70px', md: '80px' }
           }}
         >
           <Typography 
-            variant="h6" 
-            className="header-title-responsive header-title"
+            variant="h4" 
             sx={{ 
-              color: '#64ffda', 
-              fontWeight: 700,
-              fontSize: { xs: '0.85rem', sm: '0.95rem', md: '1.1rem', lg: '1.3rem', xl: '1.5rem' },
-              lineHeight: 1.2,
-              maxWidth: { xs: '160px', sm: '200px', md: '240px', lg: '300px', xl: 'none' },
-              letterSpacing: { xs: '-0.01em', sm: '-0.015em', md: '-0.02em' },
-              overflow: 'hidden',
-              textOverflow: 'ellipsis',
-              whiteSpace: 'nowrap',
-              flexShrink: 0
+              color: '#ccd6f6',
+              fontSize: { xs: '1rem', sm: '1.1rem', md: '1.25rem', lg: '1.5rem' },
+              fontWeight: 600,
+              letterSpacing: '0.02em',
+              cursor: 'pointer',
+              '&:hover': {
+                color: '#64ffda'
+              }
             }}
-            title={HEADER.title} // Add tooltip for full text
+            onClick={() => onSectionChange('about')}
           >
             {HEADER.title}
           </Typography>
-          
-          {/* Desktop Navigation - Hidden on mobile/tablet */}
-          <Box sx={{ 
-            display: { xs: 'none', lg: 'flex' }, 
-            gap: { lg: 2, xl: 3 },
-            alignItems: 'center'
-          }}>
-            {NAVIGATION.sections.map((section) => (
-              <button
-                key={section.id}
-                onClick={() => handleSectionClick(section.id)}
-                style={{
-                  background: 'none',
-                  border: 'none',
-                  color: activeSection === section.id ? '#64ffda' : '#8892b0',
-                  cursor: 'pointer',
-                  fontSize: '1rem',
-                  padding: '12px 20px',
-                  borderRadius: '6px',
-                  transition: 'all 0.3s ease',
-                  fontWeight: activeSection === section.id ? 600 : 400,
-                  whiteSpace: 'nowrap',
-                  minHeight: '44px',
-                  minWidth: '44px'
-                }}
-                onMouseEnter={(e) => {
-                  e.target.style.color = '#64ffda';
-                  e.target.style.backgroundColor = 'rgba(100, 255, 218, 0.1)';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.color = activeSection === section.id ? '#64ffda' : '#8892b0';
-                  e.target.style.backgroundColor = 'transparent';
-                }}
-              >
-                {section.label}
-              </button>
-            ))}
-          </Box>
-          
-          {/* Social Links and Mobile Menu */}
-          <Box 
-            className="header-social-icons"
-            sx={{ 
-              display: 'flex', 
-              gap: { xs: 1.5, sm: 2, md: 2.5, lg: 3 }, 
-              alignItems: 'center',
-              flexShrink: 0
-            }}
-          >
-            {/* Social Icons - Responsive sizing with better spacing */}
-            <IconButton 
-              href={HEADER.socialLinks.github} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              sx={{ 
-                color: '#8892b0',
-                '&:hover': { color: '#64ffda' },
-                padding: { xs: 1.25, sm: 1.5, md: 1.75, lg: 2, xl: 2.25 },
-                minWidth: { xs: '48px', sm: '52px', md: '56px', lg: '60px' },
-                minHeight: { xs: '48px', sm: '52px', md: '56px', lg: '60px' },
-                '& .MuiSvgIcon-root': {
-                  fontSize: { xs: '1.25rem', sm: '1.5rem', md: '1.75rem', lg: '2rem' }
-                }
-              }}
-            >
-              <GitHub />
-            </IconButton>
-            <IconButton 
-              href={HEADER.socialLinks.linkedin} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              sx={{ 
-                color: '#8892b0',
-                '&:hover': { color: '#64ffda' },
-                padding: { xs: 1.25, sm: 1.5, md: 1.75, lg: 2, xl: 2.25 },
-                minWidth: { xs: '48px', sm: '52px', md: '56px', lg: '60px' },
-                minHeight: { xs: '48px', sm: '52px', md: '56px', lg: '60px' },
-                '& .MuiSvgIcon-root': {
-                  fontSize: { xs: '1.25rem', sm: '1.5rem', md: '1.75rem', lg: '2rem' }
-                }
-              }}
-            >
-              <LinkedIn />
-            </IconButton>
-            <IconButton 
-              href={`mailto:${HEADER.socialLinks.email}`}
-              sx={{ 
-                color: '#8892b0',
-                '&:hover': { color: '#64ffda' },
-                padding: { xs: 1.25, sm: 1.5, md: 1.75, lg: 2, xl: 2.25 },
-                minWidth: { xs: '48px', sm: '52px', md: '56px', lg: '60px' },
-                minHeight: { xs: '48px', sm: '52px', md: '56px', lg: '60px' },
-                '& .MuiSvgIcon-root': {
-                  fontSize: { xs: '1.25rem', sm: '1.5rem', md: '1.75rem', lg: '2rem' }
-                }
-              }}
-            >
-              <Email />
-            </IconButton>
-            
-            {/* Mobile Menu Button - Hidden on desktop */}
+
+          {isMobile ? (
             <IconButton
               color="inherit"
               aria-label="open drawer"
               edge="start"
               onClick={handleDrawerToggle}
-              sx={{ 
-                display: { xs: 'block', lg: 'none' },
-                color: '#8892b0',
-                '&:hover': { color: '#64ffda' },
-                padding: { xs: 1.25, sm: 1.5, md: 1.75 },
-                minWidth: { xs: '48px', sm: '52px', md: '56px' },
-                minHeight: { xs: '48px', sm: '52px', md: '56px' },
-                ml: { xs: 1, sm: 1.5, md: 2 }, // Add left margin for separation
-                '& .MuiSvgIcon-root': {
-                  fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' }
+              sx={{
+                color: '#64ffda',
+                '&:hover': {
+                  backgroundColor: 'rgba(100, 255, 218, 0.1)'
                 }
               }}
             >
-              <Menu />
+              {mobileOpen ? <Close /> : <Menu />}
+            </IconButton>
+          ) : (
+            <Box sx={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: { xs: 1, sm: 2, md: 3, lg: 4 }
+            }}>
+              {NAVIGATION.sections.map((section) => (
+                <Typography
+                  key={section.id}
+                  variant="body1"
+                  sx={{
+                    color: activeSection === section.id ? '#64ffda' : '#8892b0',
+                    cursor: 'pointer',
+                    fontSize: { xs: '0.875rem', sm: '0.95rem', md: '1rem', lg: '1.05rem' },
+                    fontWeight: 500,
+                    letterSpacing: '0.02em',
+                    transition: 'color 0.3s ease',
+                    '&:hover': {
+                      color: '#64ffda'
+                    }
+                  }}
+                  onClick={() => onSectionChange(section.id)}
+                >
+                  {section.label}
+                </Typography>
+              ))}
+            </Box>
+          )}
+
+          <Box sx={{ 
+            display: 'flex', 
+            alignItems: 'center', 
+            gap: { xs: 1, sm: 1.5, md: 2 }
+          }}>
+            <IconButton
+              href={HEADER.socialLinks.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                color: '#8892b0',
+                '&:hover': {
+                  color: '#64ffda',
+                  backgroundColor: 'rgba(100, 255, 218, 0.1)'
+                },
+                fontSize: { xs: '1.25rem', sm: '1.5rem', md: '1.75rem' }
+              }}
+            >
+              <GitHub />
+            </IconButton>
+            
+            <IconButton
+              href={HEADER.socialLinks.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                color: '#8892b0',
+                '&:hover': {
+                  color: '#64ffda',
+                  backgroundColor: 'rgba(100, 255, 218, 0.1)'
+                },
+                fontSize: { xs: '1.25rem', sm: '1.5rem', md: '1.75rem' }
+              }}
+            >
+              <LinkedIn />
+            </IconButton>
+            
+            <IconButton
+              href={`mailto:${HEADER.socialLinks.email}`}
+              sx={{
+                color: '#8892b0',
+                '&:hover': {
+                  color: '#64ffda',
+                  backgroundColor: 'rgba(100, 255, 218, 0.1)'
+                },
+                fontSize: { xs: '1.25rem', sm: '1.5rem', md: '1.75rem' }
+              }}
+            >
+              <Email />
             </IconButton>
           </Box>
         </Toolbar>
       </AppBar>
 
-      {/* Mobile/Tablet Drawer */}
       <Drawer
         variant="temporary"
         anchor="right"
         open={mobileOpen}
         onClose={handleDrawerToggle}
         ModalProps={{
-          keepMounted: true, // Better open performance on mobile.
+          keepMounted: true
         }}
         sx={{
           display: { xs: 'block', lg: 'none' },
-          '& .MuiDrawer-paper': { 
-            boxSizing: 'border-box', 
+          '& .MuiDrawer-paper': {
+            boxSizing: 'border-box',
             width: { xs: '280px', sm: '320px', md: '350px' },
-            backgroundColor: '#0a192f',
+            backgroundColor: '#112240',
             borderLeft: '1px solid rgba(100, 255, 218, 0.1)',
-            boxShadow: '0 0 30px rgba(0, 0, 0, 0.7)',
-            backdropFilter: 'blur(20px)'
-          },
+            backdropFilter: 'blur(10px)'
+          }
         }}
       >
-        <Box sx={{ 
-          display: 'flex', 
-          justifyContent: 'flex-end', 
-          p: { xs: 2, sm: 3 },
-          borderBottom: '1px solid rgba(100, 255, 218, 0.1)'
-        }}>
-          <IconButton 
-            onClick={handleDrawerToggle} 
-            sx={{ 
-              color: '#8892b0',
-              '&:hover': { color: '#64ffda' },
-              minWidth: '44px',
-              minHeight: '44px'
-            }}
-          >
-            <Close />
-          </IconButton>
-        </Box>
         {drawer}
       </Drawer>
     </>
   );
 };
 
-export default Header; 
+export default Header;

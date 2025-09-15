@@ -1,11 +1,9 @@
 import React from 'react';
-import { Box, Grid, Card, CardContent, Typography, Chip, Button, useTheme } from '@mui/material';
+import { Box, Grid, Card, CardContent, Typography, Chip, Button } from '@mui/material';
 import { GitHub, Language } from '@mui/icons-material';
 import { PROJECTS } from '../../constants';
 
 const ProjectCard = ({ project }) => {
-  const theme = useTheme();
-  
   return (
     <Card sx={{ 
       height: '100%',

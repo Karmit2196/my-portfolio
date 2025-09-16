@@ -34,30 +34,30 @@ html {
 
 /* Responsive typography and spacing - Mobile-first approach */
 html {
-  font-size: 14px; /* Base size for mobile */
+  font-size: 16px; /* Base size for mobile */
 }
 
 @media (min-width: 600px) {
   html {
-    font-size: 15px; /* Small devices (tablets) */
+    font-size: 16px; /* Small devices (tablets) */
   }
 }
 
 @media (min-width: 900px) {
   html {
-    font-size: 16px; /* Medium devices (small laptops) */
+    font-size: 17px; /* Medium devices (small laptops) */
   }
 }
 
 @media (min-width: 1200px) {
   html {
-    font-size: 17px; /* Large devices (desktops) */
+    font-size: 18px; /* Large devices (desktops) */
   }
 }
 
 @media (min-width: 1536px) {
   html {
-    font-size: 18px; /* Extra large devices (large desktops) */
+    font-size: 19px; /* Extra large devices (large desktops) */
   }
 }
 

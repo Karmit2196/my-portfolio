@@ -51,7 +51,7 @@ export const EXPERIENCE = [
     location: 'Ahmedabad, Gujarat',
     period: '03/2020 - 06/2022',
     description: 'Collaborated with developers and product owners to stay current on product features and intended functionality. Effectively interacted with front-end, back-end and UI departments regarding software defects and functionality issues, working closely to develop innovative solutions. Proposed development and testing improvements to positively impact usability, function and performance. Created accurate and efficient test scripts to manage automated testing of certain products and features. Demonstrated new product features and functionality to clients, managers and team members. Completed testing under tight deadlines to meet client demands and project timelines.',
-    tech: ['Cross-functional Collaboration', 'Test Scripts', 'Product Demonstrations', 'Deadline Management', 'Innovation']
+    tech: ['Automation Scripting',  'Cross-functional Collaboration', 'Product Demonstrations', 'Deadline Management', 'Innovation']
   },
   {
     title: 'QA Engineer',
@@ -59,7 +59,7 @@ export const EXPERIENCE = [
     location: 'Ahmedabad, Gujarat',
     period: '01/2018 - 02/2020',
     description: 'Completed in-depth usability testing, functional testing and integration testing on Websites (Mostly which are implemented with React and Angular). Experienced in testing Android and iOS apps (Native and Hybrid). Wrote and optimized test cases to maximize success of manual software testing with consistent, thorough approaches. Tracked, prioritized and organized defects with JIRA, working with development team to facilitate timely corrections. Built strong rapport with team members, management and clients to facilitate efficiency and productivity.',
-    tech: ['React', 'Angular', 'Android Testing', 'iOS Testing', 'JIRA', 'Test Cases', 'Manual Testing']
+    tech: ['Web Testing', 'Android Testing', 'iOS Testing', 'JIRA', 'Test Cases', 'Manual Testing', 'Cross-functional Collaboration']
   }
 ];
 
@@ -99,11 +99,11 @@ export const PROJECTS = [
 ];
 
 export const SKILLS = {
-  'Automation Tools': ['Cypress', 'Playwright', 'Selenium'],
+  'AI Tech Stack': ['Cursor', 'GitHub Copilot', 'Prompt Engineering', 'AI-assisted Testing', 'OpenAI API', 'GPT/Claude/Gemini/llama','gpt4All','ollama'],
+  'Programming': ['JavaScript', 'TypeScript', 'Python', 'Java'],
+  'Automation Tools': ['Cypress', 'Playwright'],
   'Automation Design Patterns': ['POM (Page Object Model)', 'Hybrid Framework', 'Modular Framework', 'Data Driven Framework'],
   'API Testing': ['Postman', 'REST Assured'],
-  'AI Tech Stack': ['Cursor', 'GitHub Copilot', 'Prompt Engineering', 'AI-assisted Testing', 'OpenAI API', 'ChatGPT/Claude'],
-  'Programming': ['JavaScript', 'TypeScript', 'Python', 'Java'],
   'CI/CD & DevOps': ['Git', 'GitHub Actions', 'Jenkins', 'Docker'],
   'Reporting & Quality': ['Mochawesome', 'Allure Reports', 'ESLint', 'Prettier'],
   'Frontend': ['React', 'HTML/CSS', 'Chrome DevTools'],
@@ -134,8 +134,8 @@ export const THEME = {
       paper: '#112240',
     },
     text: {
-      primary: '#ccd6f6',
-      secondary: '#8892b0',
+      primary: '#e6edf6',
+      secondary: '#a8b2d1',
     },
   },
   typography: {
@@ -143,16 +143,16 @@ export const THEME = {
     h1: {
       fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem', xl: '4rem' },
       fontWeight: 700,
-      color: '#ccd6f6',
+      color: '#e6edf6',
       lineHeight: { xs: 1.1, sm: 1.15, md: 1.2, lg: 1.2, xl: 1.2 },
-      letterSpacing: { xs: '-0.02em', sm: '-0.025em', md: '-0.03em' },
+      letterSpacing: { xs: '0em', sm: '-0.015em', md: '-0.02em' },
     },
     h2: {
       fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem', lg: '2.25rem', xl: '2.5rem' },
       fontWeight: 600,
-      color: '#ccd6f6',
+      color: '#e6edf6',
       lineHeight: { xs: 1.2, sm: 1.25, md: 1.3, lg: 1.3, xl: 1.3 },
-      letterSpacing: { xs: '-0.01em', sm: '-0.015em', md: '-0.02em' },
+      letterSpacing: { xs: '0em', sm: '-0.01em', md: '-0.015em', lg: '-0.02em' },
     },
     h3: {
       fontSize: { xs: '1.125rem', sm: '1.25rem', md: '1.375rem', lg: '1.5rem', xl: '1.625rem' },
@@ -163,43 +163,43 @@ export const THEME = {
     h4: {
       fontSize: { xs: '1rem', sm: '1.125rem', md: '1.25rem', lg: '1.375rem', xl: '1.5rem' },
       fontWeight: 500,
-      color: '#ccd6f6',
+      color: '#e6edf6',
       lineHeight: { xs: 1.4, sm: 1.45, md: 1.5, lg: 1.5, xl: 1.5 },
     },
     h5: {
       fontSize: { xs: '0.875rem', sm: '1rem', md: '1.125rem', lg: '1.25rem', xl: '1.375rem' },
       fontWeight: 500,
-      color: '#8892b0',
+      color: '#a8b2d1',
       lineHeight: { xs: 1.4, sm: 1.45, md: 1.5, lg: 1.5, xl: 1.5 },
     },
     h6: {
       fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem', lg: '1.125rem', xl: '1.25rem' },
       fontWeight: 500,
-      color: '#8892b0',
+      color: '#a8b2d1',
       lineHeight: { xs: 1.4, sm: 1.45, md: 1.5, lg: 1.5, xl: 1.5 },
     },
     body1: {
-      fontSize: { xs: '0.875rem', sm: '0.95rem', md: '1rem', lg: '1.05rem', xl: '1.1rem' },
-      lineHeight: { xs: 1.5, sm: 1.55, md: 1.6, lg: 1.65, xl: 1.7 },
-      color: '#8892b0',
-      letterSpacing: { xs: '0.01em', sm: '0.015em', md: '0.02em' },
+      fontSize: { xs: '1rem', sm: '1.0625rem', md: '1.1rem', lg: '1.125rem', xl: '1.125rem' },
+      lineHeight: { xs: 1.65, sm: 1.65, md: 1.65, lg: 1.65, xl: 1.65 },
+      color: '#a8b2d1',
+      letterSpacing: { xs: '0em', sm: '0em', md: '0em' },
     },
     body2: {
-      fontSize: { xs: '0.8rem', sm: '0.875rem', md: '0.9rem', lg: '0.95rem', xl: '1rem' },
-      lineHeight: { xs: 1.4, sm: 1.45, md: 1.5, lg: 1.55, xl: 1.6 },
-      color: '#8892b0',
-      letterSpacing: { xs: '0.01em', sm: '0.015em', md: '0.02em' },
+      fontSize: { xs: '0.9375rem', sm: '1rem', md: '1rem', lg: '1rem', xl: '1rem' },
+      lineHeight: { xs: 1.55, sm: 1.6, md: 1.6, lg: 1.6, xl: 1.6 },
+      color: '#a8b2d1',
+      letterSpacing: { xs: '0em', sm: '0em', md: '0em' },
     },
     caption: {
       fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.85rem', lg: '0.9rem', xl: '0.95rem' },
       lineHeight: { xs: 1.3, sm: 1.35, md: 1.4, lg: 1.45, xl: 1.5 },
-      color: '#8892b0',
+      color: '#a8b2d1',
     },
     button: {
       fontSize: { xs: '0.8rem', sm: '0.875rem', md: '0.9rem', lg: '0.95rem', xl: '1rem' },
       fontWeight: 500,
       textTransform: 'none',
-      letterSpacing: { xs: '0.02em', sm: '0.025em', md: '0.03em' },
+      letterSpacing: { xs: '0.02em', sm: '0.02em', md: '0.02em' },
     },
   },
   spacing: (factor) => `${8 * factor}px`,

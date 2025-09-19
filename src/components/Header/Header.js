@@ -8,17 +8,13 @@ import {
   Drawer,
   List,
   ListItem,
-  ListItemText,
-  useTheme,
-  useMediaQuery
+  ListItemText
 } from '@mui/material';
 import { GitHub, LinkedIn, Email, Menu, Close } from '@mui/icons-material';
 import { HEADER, NAVIGATION } from '../../constants';
 
 const Header = ({ activeSection, onSectionChange }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
